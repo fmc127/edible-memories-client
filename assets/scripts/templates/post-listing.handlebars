@@ -1,0 +1,49 @@
+{{#each posts as |post|}}
+  <section data-id="{{post.id}}">
+    <h6>Post Information:</h6>
+    <h6>Title:</h6>
+    <p>
+      {{#if post.title}}
+        {{post.title}}
+      {{else}}
+        No title provided.
+      {{/if}}
+    </p>
+    <h6>Description:</h6>
+    <p>
+      {{#if post.description}}
+        {{post.description}}
+      {{else}}
+        No description provided.
+      {{/if}}
+    </p>
+    <h6>Recipe:</h6>
+    <p>
+      {{#if post.recipe}}
+        {{post.recipe}}
+      {{else}}
+        No recipe provided.
+      {{/if}}
+      <h6>Rating:</h6>
+      <p>
+        {{#if post.rating}}
+          {{post.rating}}
+        {{else}}
+          No rating provided.
+        {{/if}}
+      </p>
+      <p> Post ID:
+        {{#if post.id}}
+          {{post.id}}
+        {{else}}
+          No data provided.
+        {{/if}}
+        {{#if post.editable}}
+          {{> remove-post id=post.id}}
+        {{/if}}
+      </p>
+    </p>
+    <!-- {{> remove-post id=post.id}} -->
+  </section>
+
+{{/each}}
