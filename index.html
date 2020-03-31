@@ -34,7 +34,7 @@
     </fieldset>
   </form> -->
 
-  <form id="change-password">
+  <!-- <form id="change-password">
     <fieldset>
       <legend>Change Password!</legend>
       <input name="passwords[old]" type="password" placeholder="Old Password" required>
@@ -48,11 +48,11 @@
       <legend>Sign Out</legend>
       <input type="submit" value="Sign Out!">
     </fieldset>
-  </form>
+  </form> -->
 
   <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-  Launch demo modal
+  Welcome!
 </button>
 
 <!-- Modal -->
@@ -84,6 +84,21 @@
             <input type="submit" value="Sign Up!">
           </fieldset>
         </form>
+        <form id="change-password">
+          <fieldset>
+            <legend>Change Password!</legend>
+            <input name="passwords[old]" type="password" placeholder="Old Password" required>
+            <input name="passwords[new]" type="password" placeholder="New Password" required>
+            <input type="submit" value="Change Password!">
+          </fieldset>
+        </form>
+
+        <form id="sign-out">
+          <fieldset>
+            <legend>Sign Out</legend>
+            <input type="submit" value="Sign Out!">
+          </fieldset>
+        </form>
       </div>
     </div>
   </div>
@@ -91,7 +106,7 @@
 <!--
   <form id="show-post">
     <fieldset>
-      <legend>Show Characters!</legend>
+      <legend>Show Posts!</legend>
       <input name="post[post]" type="text" placeholder="Alias">
       <input type="submit" value="Show!">
     </fieldset>

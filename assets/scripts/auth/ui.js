@@ -33,7 +33,8 @@ const onSignInSuccess = function (response) {
   $('#sign-in').hide()
   $('#sign-up').hide()
   $('#sign-up').trigger('reset')
-  $('showPostsButton').show()
+  $('#showPostsButton').show()
+  // $('#exampleModalLong').hide()
 }
 
 const onSignInFailure = function (response) {
@@ -82,10 +83,10 @@ const onShowPostSuccess = function (data) {
   $('#showPostsButton').hide()
   $('#clearPostsButton').show()
   // if (store.updatePost === false) {
-  $('#message').text('Behold!')
+  $('#message').text('Here are your posts!')
   // store.updatePost = false
   // $('#message').text('Behold!')
-  $('#show-post').trigger('reset')
+  // $('#show-post').trigger('reset')
   const showPostsHtml = showPostsTemplate({ posts: data.posts })
   $('.all-posts').html('')
   $('.all-posts').append(showPostsHtml)
@@ -95,7 +96,7 @@ const onReShowPosts = function (data, message) {
   $('#message').text(message)
   store.updatePost = false
   // $('#message').text('Behold!')
-  $('#show-post').trigger('reset')
+  // $('#show-post').trigger('reset')
   const showPostsHtml = showPostsTemplate({ posts: data.posts })
   $('.all-posts').html('')
   $('.all-posts').append(showPostsHtml)
@@ -103,7 +104,7 @@ const onReShowPosts = function (data, message) {
 
 const onShowPostFailure = function (response) {
   $('#message').text('Could not locate post')
-  $('#show-post').trigger('reset')
+  // $('#show-post').trigger('reset')
 }
 
 const onCreatePostSuccess = function (response) {
@@ -173,7 +174,7 @@ const clearPostSuccess = () => {
 }
 
 const clearPostFailure = (error) => {
-  $('#message').text('We aint goin nowhere!')
+  $('#message').text('Cannot clear!')
   console.error(error)
 }
 
