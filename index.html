@@ -31,33 +31,44 @@
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
+
+            <form id="sign-up" class="form-group">
+            <fieldset>
+              <legend>Sign up!</legend>
+              <input name='credentials[email]' class="form-control" type='email' placeholder="email@email.com">
+              <br>
+              <input name='credentials[password]' class="form-control" type='password' placeholder="password">
+              <br>
+              <input name='credentials[password_confirmation]' class="form-control" type='password' placeholder="confirm password">
+              <br>
+              <input type='submit' class="form-control" value='Sign Up!'>
+            </fieldset>
+          </form>
+
+            <br></br>
+
             <div class="modal-body">
-              <form id="sign-in">
-                <fieldset>
-                  <legend>Sign In!</legend>
-                  <input name="credentials[email]" type="email" placeholder="Email">
-                  <input name="credentials[password]" type="password" placeholder="Password">
-                  <input type="submit" value="Sign In!">
-                </fieldset>
-              </form>
+          <form id="sign-in" class="form-group">
+              <fieldset>
+                <legend>Sign in!</legend>
+                <input name='credentials[email]' class="form-control" type='email' placeholder="email@email.com">
+                <br>
+                <input name='credentials[password]' class="form-control" type='password' placeholder="password">
+                <br>
+                <input type='submit' class="form-control" value='Sign In!'>
+              </fieldset>
+          </form>
               <br></br>
-              <form id="sign-up">
-                <fieldset>
-                  <legend>Sign Up!</legend>
-                  <input name="credentials[email]" type="email" placeholder="example@example.com">
-                  <input name="credentials[password]" type="password" placeholder="Password">
-                  <input name="credentials[password_confirmation]" type="password" placeholder="Confirm Password">
-                  <input type="submit" value="Sign Up!">
-                </fieldset>
-              </form>
-              <form id="change-password">
-                <fieldset>
-                  <legend>Change Password!</legend>
-                  <input name="passwords[old]" type="password" placeholder="Old Password" required>
-                  <input name="passwords[new]" type="password" placeholder="New Password" required>
-                  <input type="submit" value="Change Password!">
-                </fieldset>
-              </form>
+           <form id="change-password" class="form-group">
+             <fieldset>
+               <legend>Change Password!</legend>
+               <input name='passwords[old]' class="form-control" type='password' placeholder="Old Password">
+               <br>
+               <input name='passwords[new]' class="form-control" type='password' placeholder="New Password">
+               <br>
+               <input type='submit' class="form-control" value='Change password!'>
+             </fieldset>
+           </form>
 
               <form id="sign-out">
                 <fieldset>
@@ -71,6 +82,7 @@
       </div>
       </nav>
 
+
       <div id='message'></div>
   <!-- <form id="sign-in">
     <fieldset>
@@ -80,7 +92,6 @@
       <input type="submit" value="Sign In!">
     </fieldset>
   </form>
-
   <form id="sign-up">
     <fieldset>
       <legend>Sign Up!</legend>
@@ -89,7 +100,7 @@
       <input name="credentials[password_confirmation]" type="password" placeholder="Confirm Password">
       <input type="submit" value="Sign Up!">
     </fieldset>
-  </form> -->
+  </form>
 
   <!-- <form id="change-password">
     <fieldset>
@@ -99,7 +110,6 @@
       <input type="submit" value="Change Password!">
     </fieldset>
   </form>
-
   <form id="sign-out">
     <fieldset>
       <legend>Sign Out</legend>
@@ -115,7 +125,7 @@
     </fieldset>
   </form> -->
 
-  <form id="create-post">
+  <!-- <form id="create-post">
     <fieldset>
       <legend>Create a Post!</legend>
       <input name="post[title]" type="text" placeholder="Title" required>
@@ -124,9 +134,37 @@
       <input name="post[rating]" type="text" placeholder="Rating" required>
       <input type="submit" value="Create">
     </fieldset>
-  </form>
+  </form> -->
 
-  <form id="update-post">
+  <form id="create-post">
+      <div class='form-group text-center col-12 col-sm-6'>
+      <fieldset>
+        <legend>Create a post</legend>
+        <input name="post[title]" type="text" class="form-control" placeholder="Title" required>
+        <textarea name="post[description]" type="text" class="form-control" placeholder="Description" required></textarea>
+        <textarea name="post[recipe]" type="text" class="form-control" placeholder="Recipe"></textarea>
+        <input name="post[rating]" type="number" class="form-control" placeholder="Rating">
+        <input type="submit" class="btn btn-outline-primary" value="Create Post">
+      </fieldset>
+    </div>
+    </form>
+
+    <form id="update-post">
+        <div class='form-group text-center col-12 col-sm-6'>
+        <fieldset>
+          <legend>Update a post</legend>
+          <input name="post[id]" type="text" class="form-control" placeholder="ID" required>
+
+          <input name="post[title]" type="text" class="form-control" placeholder="Title" required>
+          <textarea name="post[description]" type="text" class="form-control" placeholder="Description" required></textarea>
+          <textarea name="post[recipe]" type="text" class="form-control" placeholder="Recipe"></textarea>
+          <input name="post[rating]" type="number" class="form-control" placeholder="Rating">
+          <input type="submit" class="btn btn-outline-primary" value="Update Post">
+        </fieldset>
+      </div>
+      </form>
+
+  <!-- <form id="update-post">
     <fieldset>
       <legend>Update a Post!</legend>
       <input name="post[id]" type="text" placeholder="ID" required>
@@ -136,7 +174,7 @@
       <input name="post[rating]" type="text" placeholder="Rating" required>
       <input type="submit" value="Update">
     </fieldset>
-  </form>
+  </form> -->
 
   <nav>
       <div class="app-name"></div>

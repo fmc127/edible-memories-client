@@ -10,6 +10,7 @@ const onSignUpSuccess = function (response) {
   $('#message').removeClass()
   $('#message').addClass('success-message')
   $('#sign-in').trigger('reset')
+  clearMessage()
 }
 
 const onSignUpFailure = function (response) {
@@ -18,6 +19,7 @@ const onSignUpFailure = function (response) {
   $('#message').addClass('failure-message')
   $('#sign-up').trigger('reset')
   $('#sign-in').trigger('reset')
+  clearMessage()
 }
 
 const onSignInSuccess = function (response) {
@@ -34,22 +36,25 @@ const onSignInSuccess = function (response) {
   $('#sign-up').hide()
   $('#sign-up').trigger('reset')
   $('#showPostsButton').show()
-  // $('#exampleModalLong').hide()
+  clearMessage()
 }
 
 const onSignInFailure = function (response) {
   $('#message').text('Sign in failed')
   $('#sign-in').trigger('reset')
+  clearMessage()
 }
 
 const onChangePasswordSuccess = function (response) {
   $('#message').text('Successfully changed password')
   $('#change-password').trigger('reset')
+  clearMessage()
 }
 
 const onChangePasswordFailure = function (response) {
   $('#message').text('Failed to change password')
   $('#change-password').trigger('reset')
+  clearMessage()
 }
 
 const onSignOutSuccess = function (response) {
@@ -69,6 +74,7 @@ const onSignOutSuccess = function (response) {
   $('.all-posts').html('')
   $('#create-post').trigger('reset')
   $('#update-post').trigger('reset')
+  clearMessage()
 
   store.user = null
   // store.user = response.user
@@ -77,6 +83,7 @@ const onSignOutSuccess = function (response) {
 const onSignOutFailure = function (response) {
   $('#message').text('Sign out failed')
   $('#sign-out').trigger('reset')
+  clearMessage()
 }
 
 const onShowPostSuccess = function (data) {
@@ -90,6 +97,7 @@ const onShowPostSuccess = function (data) {
   const showPostsHtml = showPostsTemplate({ posts: data.posts })
   $('.all-posts').html('')
   $('.all-posts').append(showPostsHtml)
+  clearMessage()
 }
 
 const onReShowPosts = function (data, message) {
@@ -100,10 +108,12 @@ const onReShowPosts = function (data, message) {
   const showPostsHtml = showPostsTemplate({ posts: data.posts })
   $('.all-posts').html('')
   $('.all-posts').append(showPostsHtml)
+  clearMessage()
 }
 
 const onShowPostFailure = function (response) {
   $('#message').text('Could not locate post')
+  clearMessage()
   // $('#show-post').trigger('reset')
 }
 
@@ -113,6 +123,7 @@ const onCreatePostSuccess = function (response) {
   $('#showPostsButton').hide()
   $('#clearPostsButton').show()
   $('#update-post').trigger('reset')
+  clearMessage()
 
   api.showPost()
     .then((data) => {
@@ -124,6 +135,7 @@ const onCreatePostSuccess = function (response) {
 const onCreatePostFailure = function (response) {
   $('#message').text('Failed to create post')
   $('#create-post').trigger('reset')
+  clearMessage()
 }
 
 const onUpdatePostSuccess = function (data) {
@@ -131,6 +143,7 @@ const onUpdatePostSuccess = function (data) {
   $('#change-password').trigger('reset')
   $('.all-posts').trigger('reset')
   $('#create-post').trigger('reset')
+  clearMessage()
   store.updatePost = true
   api.showPost()
     .then((data) => {
@@ -142,11 +155,13 @@ const onUpdatePostSuccess = function (data) {
 const onUpdatePostFailure = function (response) {
   $('#message').text('Failed to update post')
   $('#update-post').trigger('reset')
+  clearMessage()
 }
 
 const onDeletePostSuccess = function (response) {
   // $('#message').text('Deleted post!')
   $('#remove-post').trigger('reset')
+  clearMessage()
   api.showPost()
     .then((data) => {
       onReShowPosts(data, 'Deleted post!')
@@ -157,6 +172,7 @@ const onDeletePostSuccess = function (response) {
 const onDeletePostFailure = function (response) {
   $('#message').text('Failed to delete post!')
   $('#remove-post').trigger('reset')
+  clearMessage()
 }
 
 const getPostsSuccess = (data) => {
@@ -176,6 +192,14 @@ const clearPostSuccess = () => {
 const clearPostFailure = (error) => {
   $('#message').text('Cannot clear!')
   console.error(error)
+}
+
+const clearMessage = () => {
+  setTimeout(function () {
+    $('#message').text('')
+    $('#message').removeClass('failure')
+    $('#message').removeClass('success')
+  }, 5000)
 }
 
 module.exports = {
