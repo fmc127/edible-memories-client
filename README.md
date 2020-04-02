@@ -5,6 +5,15 @@ API Repo: [Edible Memories API Repo](https://github.com/fmc127/edible-memories-a
 Deployed Client: [Edible Memories Deployed Client](https://t-hatsquad.github.io/bucket-list-client/)\
 Deployed API: [Edible Memories Deployed API](https://salty-gorge-11112.herokuapp.com/)
 
+# Technologies Used
+ - JavaScript
+ - jQuery
+ - AJAX
+ - HTML
+ - CSS
+ - Handlebars
+ - Git
+
 ## Set Up
 Browser template: [browser template](https://git.generalassemb.ly/ga-wdi-boston/browser-template)\
 To install dependencies: `npm install`\
