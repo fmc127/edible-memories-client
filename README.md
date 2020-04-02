@@ -21,7 +21,7 @@ Deployed API: [Edible Memories Deployed API](https://salty-gorge-11112.herokuapp
  - Git
 
 ## Set Up
-Browser template: [browser template](https://git.generalassemb.ly/ga-wdi-boston/browser-template)\
+[Browser Template](https://git.generalassemb.ly/ga-wdi-boston/browser-template)\
 To install dependencies: `npm install`\
 To run locally: `grunt serve`\
 
@@ -36,7 +36,7 @@ To run locally: `grunt serve`\
 
 
 ## Wireframes
-[Wireframes]
+
 - https://imgur.com/mHRVyGH
 - https://imgur.com/jpXjOLh
 
