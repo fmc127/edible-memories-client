@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Edible Memories</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+      <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+
+
+      <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand"><h1>Edible Memories</h1></a>
+
+        <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+        User Information
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalTitle"></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+
+            <form id="sign-up" class="form-group">
+            <fieldset>
+              <legend>Sign up!</legend>
+              <input name='credentials[email]' class="form-control" type='email' placeholder="email@email.com">
+              <br>
+              <input name='credentials[password]' class="form-control" type='password' placeholder="password">
+              <br>
+              <input name='credentials[password_confirmation]' class="form-control" type='password' placeholder="confirm password">
+              <br>
+              <input type='submit' class="form-control" value='Sign Up!'>
+            </fieldset>
+          </form>
+
+            <br></br>
+
+            <div class="modal-body">
+          <form id="sign-in" class="form-group">
+              <fieldset>
+                <legend>Sign in!</legend>
+                <input name='credentials[email]' class="form-control" type='email' placeholder="email@email.com">
+                <br>
+                <input name='credentials[password]' class="form-control" type='password' placeholder="password">
+                <br>
+                <input type='submit' class="form-control" value='Sign In!'>
+              </fieldset>
+          </form>
+              <br></br>
+           <form id="change-password" class="form-group">
+             <fieldset>
+               <legend>Change Password!</legend>
+               <input name='passwords[old]' class="form-control" type='password' placeholder="Old Password">
+               <br>
+               <input name='passwords[new]' class="form-control" type='password' placeholder="New Password">
+               <br>
+               <input type='submit' class="form-control" value='Change password!'>
+             </fieldset>
+           </form>
+
+              <form id="sign-out">
+                <fieldset>
+                  <input type="submit" value="Sign Out!">
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      </nav>
+
+
+      <div id='message'></div>
+  <div class="container">
+  <form id="create-post">
+      <div class='form-group text-center col-12 col-sm-6'>
+      <fieldset>
+        <legend>Create a post</legend>
+        <input name="post[title]" type="text" class="form-control" placeholder="Title" required>
+        <textarea name="post[description]" type="text" class="form-control" placeholder="Description" required></textarea>
+        <textarea name="post[recipe]" type="text" class="form-control" placeholder="Recipe"></textarea>
+        <input name="post[rating]" type="number" class="form-control" placeholder="Rating">
+        <input type="submit" class="btn btn-outline-primary" value="Create Post">
+      </fieldset>
+    </div>
+    </form>
+</div>
+<div class="container">
+    <form id="update-post">
+        <div class='form-group text-center col-12 col-sm-6'>
+        <fieldset>
+          <legend>Update a post</legend>
+          <input name="post[id]" type="text" class="form-control" placeholder="ID" required>
+
+          <input name="post[title]" type="text" class="form-control" placeholder="Title" required>
+          <textarea name="post[description]" type="text" class="form-control" placeholder="Description" required></textarea>
+          <textarea name="post[recipe]" type="text" class="form-control" placeholder="Recipe"></textarea>
+          <input name="post[rating]" type="number" class="form-control" placeholder="Rating">
+          <input type="submit" class="btn btn-outline-primary" value="Update Post">
+        </fieldset>
+      </div>
+      </form>
+    </div>
+
+
+  <nav>
+      <div class="app-name"></div>
+      <div class="all-posts container"></div>
+      <div class="nav-buttons">
+        <button id="showPostsButton" class="btn btn-info">Show Posts</button>
+        <button id="clearPostsButton" class="btn btn-outline-info">Clear Posts</button>
+      </div>
+  </nav>
+
+    </body>
+</html>
