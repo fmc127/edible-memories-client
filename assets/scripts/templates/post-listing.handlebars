@@ -1,7 +1,10 @@
+<div class="row">
+
 {{#each posts as |post|}}
-  <section data-id="{{post.id}}">
-    <h6>Post Information:</h6>
+<section class="col-12 col-md-3 col-sm-6 text-center posts" data-id="{{post._id}}">
+
     <h6>Title:</h6>
+
     <p>
       {{#if post.title}}
         {{post.title}}
@@ -43,7 +46,7 @@
         {{/if}}
       </p>
     </p>
-    {{> remove-post id=post.id}}
   </section>
 
 {{/each}}
+</div>

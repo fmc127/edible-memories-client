@@ -6,6 +6,7 @@
 
       <!-- Do not add `link` tags-->
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+      <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
 
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
@@ -16,9 +17,10 @@
 
       <nav class="navbar navbar-light bg-light">
         <a class="navbar-brand"><h1>Edible Memories</h1></a>
+
         <!-- Button trigger modal -->
       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-        Welcome!
+        User Information
       </button>
 
       <!-- Modal -->
@@ -26,7 +28,7 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="modalTitle">Sign In or create an account!</h5>
+              <h5 class="modal-title" id="modalTitle"></h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -72,7 +74,6 @@
 
               <form id="sign-out">
                 <fieldset>
-                  <legend>Sign Out</legend>
                   <input type="submit" value="Sign Out!">
                 </fieldset>
               </form>
@@ -84,58 +85,7 @@
 
 
       <div id='message'></div>
-  <!-- <form id="sign-in">
-    <fieldset>
-      <legend>Sign In!</legend>
-      <input name="credentials[email]" type="email" placeholder="Email">
-      <input name="credentials[password]" type="password" placeholder="Password">
-      <input type="submit" value="Sign In!">
-    </fieldset>
-  </form>
-  <form id="sign-up">
-    <fieldset>
-      <legend>Sign Up!</legend>
-      <input name="credentials[email]" type="email" placeholder="example@example.com">
-      <input name="credentials[password]" type="password" placeholder="Password">
-      <input name="credentials[password_confirmation]" type="password" placeholder="Confirm Password">
-      <input type="submit" value="Sign Up!">
-    </fieldset>
-  </form>
-
-  <!-- <form id="change-password">
-    <fieldset>
-      <legend>Change Password!</legend>
-      <input name="passwords[old]" type="password" placeholder="Old Password" required>
-      <input name="passwords[new]" type="password" placeholder="New Password" required>
-      <input type="submit" value="Change Password!">
-    </fieldset>
-  </form>
-  <form id="sign-out">
-    <fieldset>
-      <legend>Sign Out</legend>
-      <input type="submit" value="Sign Out!">
-    </fieldset>
-  </form> -->
-<!--
-  <form id="show-post">
-    <fieldset>
-      <legend>Show Posts!</legend>
-      <input name="post[post]" type="text" placeholder="Alias">
-      <input type="submit" value="Show!">
-    </fieldset>
-  </form> -->
-
-  <!-- <form id="create-post">
-    <fieldset>
-      <legend>Create a Post!</legend>
-      <input name="post[title]" type="text" placeholder="Title" required>
-      <input name="post[description]" type="text" placeholder="Description" required>
-      <input name="post[recipe]" type="text" placeholder="Recipe" required>
-      <input name="post[rating]" type="text" placeholder="Rating" required>
-      <input type="submit" value="Create">
-    </fieldset>
-  </form> -->
-
+  <div class="container">
   <form id="create-post">
       <div class='form-group text-center col-12 col-sm-6'>
       <fieldset>
@@ -148,7 +98,8 @@
       </fieldset>
     </div>
     </form>
-
+</div>
+<div class="container">
     <form id="update-post">
         <div class='form-group text-center col-12 col-sm-6'>
         <fieldset>
@@ -163,22 +114,12 @@
         </fieldset>
       </div>
       </form>
+    </div>
 
-  <!-- <form id="update-post">
-    <fieldset>
-      <legend>Update a Post!</legend>
-      <input name="post[id]" type="text" placeholder="ID" required>
-      <input name="post[title]" type="text" placeholder="Title" required>
-      <input name="post[description]" type="text" placeholder="Description" required>
-      <input name="post[recipe]" type="text" placeholder="Recipe" required>
-      <input name="post[rating]" type="text" placeholder="Rating" required>
-      <input type="submit" value="Update">
-    </fieldset>
-  </form> -->
 
   <nav>
       <div class="app-name"></div>
-      <div class="all-posts"></div>
+      <div class="all-posts container"></div>
       <div class="nav-buttons">
         <button id="showPostsButton" class="btn btn-info">Show Posts</button>
         <button id="clearPostsButton" class="btn btn-outline-info">Clear Posts</button>
