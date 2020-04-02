@@ -2,7 +2,7 @@
 
 Client Repo: [Edible Memories Client Repo](https://github.com/fmc127/edible-memories-client)\
 API Repo: [Edible Memories API Repo](https://github.com/fmc127/edible-memories-api)\
-Deployed Client: [Edible Memories Deployed Client](https://t-hatsquad.github.io/bucket-list-client/)\
+Deployed Client: [Edible Memories Deployed Client](https://fmc127.github.io/edible-memories-client/)\
 Deployed API: [Edible Memories Deployed API](https://salty-gorge-11112.herokuapp.com/)
 
 # Technologies Used
