@@ -31,8 +31,8 @@ To run locally: `grunt serve`\
 
 ## Wireframes
 [Wireframes]
-https://imgur.com/mHRVyGH
-https://imgur.com/jpXjOLh
+- https://imgur.com/mHRVyGH
+- https://imgur.com/jpXjOLh
 
 ## Planning
 1. Wireframes and user Stories.

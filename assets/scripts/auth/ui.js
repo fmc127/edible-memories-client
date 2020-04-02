@@ -176,7 +176,6 @@ const onDeletePostFailure = function (response) {
 }
 
 const getPostsSuccess = (data) => {
-  // console.log(data)
   const showPostsHtml = showPostsTemplate({ posts: data.posts })
   $('#message').text('Behold!')
   $('.content').html(showPostsHtml)
